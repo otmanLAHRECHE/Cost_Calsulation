@@ -101,17 +101,14 @@ export default function SignInSide() {
   };
 
   if (localStorage.getItem("auth_token") && loged == true) {
-    if(localStorage.getItem("user_type") == "PC"){
+    if(localStorage.getItem("user_type") == "cuisine"){
       
-      console.log("navigate to /pc")
-      return <Navigate to="/pc"/>;
-    }else if(localStorage.getItem("user_type") == "PG"){
+      console.log("navigate to /cuisine")
+      return <Navigate to="/cuisine"/>;
+    }else if(localStorage.getItem("user_type") == "rh"){
 
-      console.log("navigate to /pg")
-      return <Navigate to="/pg"/>;
-    }else if(localStorage.getItem("user_type") == "ADMIN"){
-        console.log("navigate to /Admin")
-        return <Navigate to="/Admin"/>;
+      console.log("navigate to /rh")
+      return <Navigate to="/rh"/>;
     }
   }else{
   return (

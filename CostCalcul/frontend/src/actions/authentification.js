@@ -22,7 +22,7 @@ export const loadUser = async (token) => {
     console.log("success", JSON.parse(text));
     console.log("User loaded");
     
-    await localStorage.setItem("user_type", JSON.parse(text).type_user);
+    await localStorage.setItem("user_type", JSON.parse(text).role);
   } else {
     console.log("failed", text);
     Object.entries(JSON.parse(text)).forEach(([key, value]) => {
